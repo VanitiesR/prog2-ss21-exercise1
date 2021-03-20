@@ -12,11 +12,14 @@ public class Result {
         }
         System.out.print("\nAfter rounding\n");
         for(int i = 0; i <= grades.size()-1; i++){
-            if(grades.get(i) % 5 >= 3){
-                grades.set(i, (grades.get(i) + 5) - (grades.get(i) % 5));
+            if(grades.get(i) >= 38) {
+                if (grades.get(i) % 5 >= 3) {
+                    grades.set(i, (grades.get(i) + 5) - (grades.get(i) % 5));
+                }
             }
             System.out.print(grades.get(i) + " ");
         }
+        System.out.print("\n\n");
         return grades;
     }
 }
